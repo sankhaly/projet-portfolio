@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOXICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="CSS/styles4.css">
+
+        <!--========== JS ==========-->
+        <script defer src="script.js"></script>
+
+        <title>Alicia Sanchez</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL ==========-->
+        <!-- <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a> -->
+
+        <!--========== HEADER ==========-->
+        <header class="header" id="header">
+            <nav class="nav-container">
+                <a href="index.html" class="nav__logo"><h1>PORTFOLIO</h1></a>
+                
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">accueil</a></li>
+                        <li class="nav__item"><a href="work.html" class="nav__link">work</a></li>
+                        <li class="nav__item"><a href="àpropos.html" class="nav__link">à propos</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">contact</a></li>
+
+                        <li><i class='bx bx-sun change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="border"></div>
+        </header>
+
+        <div class="cursor"></div>
+
+        <script>
+
+            (function () {
+            
+                  const link = document.querySelectorAll('nav > .hover-this');
+                  const cursor = document.querySelector('.cursor');
+            
+                  const animateit = function (e) {
+                        const span = this.querySelector('span');
+                        const { offsetX: x, offsetY: y } = e,
+                        { offsetWidth: width, offsetHeight: height } = this,
+            
+                        move = 25,
+                        xMove = x / width * (move * 2) - move,
+                        yMove = y / height * (move * 2) - move;
+            
+                        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            
+                        if (e.type === 'mouseleave') span.style.transform = '';
+                  };
+            
+                  const editCursor = e => {
+                        const { clientX: x, clientY: y } = e;
+                        cursor.style.left = x + 'px';
+                        cursor.style.top = y + 'px';
+                  };
+            
+                  link.forEach(b => b.addEventListener('mousemove', animateit));
+                  link.forEach(b => b.addEventListener('mouseleave', animateit));
+                  window.addEventListener('mousemove', editCursor);
+            
+            })();
+            
+            </script>
+
+         <!--========== HOME ==========-->
+
+         <section class="contact">
+            <div class="contact__container contact-grid">
+                <div>
+                    <h1 class="contact__title">Commençons un nouveau projet</h1>
+                    <!-- <h1 class="contact__title">un nouveau</h1>
+                    <h1 class="contact__title">projet.</h1> -->
+                </div>
+        <!-- FORM -->
+                <div class="formulaire">
+                    <div class="formulaire__container">
+                        <form name="Form" action="/submit.php" onsubmit="event.preventDefault(); validateForm()">
+
+                            <div class="form">
+                                <label for="name">NOM & PRÉNOM</label>
+                                <input type="text" placeholder="">
+                                <small class="erreur"></small>
+                            </div>
+
+                            <div class="form">
+                                <label for="email">EMAIL</label>
+                                <input type="text" placeholder="">
+                                <small class="erreur"></small>
+                            </div>
+
+                            <div class="form">
+                                <label for="Sujet">SUJET</label>
+                                <input type="text" placeholder="">
+                                <small class="erreur"></small>
+                            </div>
+
+                            <div class="form">
+                                <label for="Message">MESSAGE</label>
+                                <textarea name="message" id="msg" cols="30" rows="6"></textarea>
+                                <small class="erreur"></small>
+                            </div>
+
+                            <div class="btn-form">
+                                <!-- <input type="envoyer" value="ENVOYER"> -->
+                                <button>
+                                    ENVOYER
+                                  </button>
+                                <p id="succes"></p>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span> 
+            </div>
+
+            <div class="coordonnee">
+                <h2>sanchez.alicia.pro@gmail.com</h2>
+                <p>ACTUELLEMENT À LA RECHERCHE<br> 
+                    D’UNE FORMATION DE DÉVELOPPEUR <br>WEB 
+                    & WEB MOBILE.</p>
+                <h3>à bientôt</h3>
+            </div>
+         </section>
+
+         

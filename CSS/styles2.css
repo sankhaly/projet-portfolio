@@ -1,0 +1,295 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+/* CSS RESSET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+:root{
+    /* FONT & TYPOGRAPHY */
+--body-font: 'Mukta', sans-serif;
+--biggest-font-size: 9rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+/* FONT WEIGHT */
+--font-extra-bold: 800;
+--font-bold: 600;
+
+/* COLORS */
+
+--first-color: rgba(0, 0, 0, 0.929);
+--second-color: white;
+
+/* Z INDEX */
+--z-fixed: 100;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    margin: 0 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--second-color);
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+    background-color: var(--first-color);
+    /* overflow:hidden; */
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAV */
+nav{
+    display: flex;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 80px;
+    color: var(--second-color);
+    
+    
+
+}
+
+.border{
+  
+    width: 1420px;
+    height: 2px;
+    margin-top: -10px;
+    margin-left: 20%;
+    border-radius: 2000px;
+    background-color: white;
+    color: white;
+    
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+}
+
+.hover-this:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(8);
+}
+
+@media(min-width: 900px) {
+    nav {
+          display: flex;
+          justify-content: space-around;
+    }
+}
+
+@media(max-width: 900px) {
+    nav {
+          top: 30%;
+    }
+
+    .hover-this {
+          width: 100%;
+          padding: 20px 0;
+          display: inline-block;
+    }
+}
+ul li:hover ~ .cursor{
+    transform: scale(8);
+}
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav__list li{
+    margin: 0 40px 0 70px;
+   
+    
+}
+
+.nav__item{
+    color: var(--second-color);
+    
+}
+
+.nav__logo h1{
+    font-size: var(--h1-font-size);
+    margin-left: 85%;
+}
+.nav__link, .nav__logo{
+    color: var(--second-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
+
+.nav__link{
+     padding: 0 0 0 20px;
+}
+
+/* .nav__link:hover{
+    opacity: 30%;
+} */
+
+#theme-button{
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+/* HOME */
+
+.work__container{
+    /* height: calc(100% - 3rem); */
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / 2;
+        grid-row: 1;
+        padding: 90px;
+        justify-content: space-between;
+        
+}
+
+.work__title{
+    font-size: var(--biggest-font-size);
+    font-weight: 800;
+    margin-top: 5%;
+    line-height: .9;
+    margin-left: 19%;
+    
+    
+    
+}
+
+.projet{
+    margin-left: 7%;
+}
+
+table{
+    border-collapse: collapse;
+    min-width: 400px;
+    /* width: auto; */
+    margin-top: 7%;
+    margin-left: 13%;
+}
+.t1{
+    table-layout: fixed;
+}
+
+
+th {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 1.5rem;
+    
+    
+}
+
+td{
+    font-size: 1.1rem;
+    
+    
+}
+
+th, td{
+    padding: 15px 30px ;
+    
+}
+
+
+
+.theme-button{
+    font-size: 1.8rem;
+    rotate: -45deg;
+    cursor: pointer;
+}
+
+.theme-button:hover{
+
+}
+
+.projet p{
+    font-size: .8rem;
+    margin-left: 14%;
+    margin-top: 2%;
+    color: rgb(86, 86, 86);
+    
+}

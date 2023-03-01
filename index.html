@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOXICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="CSS/styles.css">
+
+        <!--========== JS ==========-->
+        <script defer src="JS/script.js"></script>
+
+        <title>Alicia Sanchez</title>
+    </head>
+    <body>
+
+       
+        <!--========== HEADER ==========-->
+        <header class="header" id="header">
+            <nav class="nav-container">
+                <a href="index.html" class="nav__logo"><h1>PORTFOLIO</h1></a>
+                
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#accueil" class="nav__link active-link">accueil</a></li>
+                        <li class="nav__item"><a href="work.html" class="nav__link">work</a></li>
+                        <li class="nav__item"><a href="àpropos.html" class="nav__link">à propos</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">contact</a></li>
+
+                        <li><i class='bx bx-moon change-theme dark' id="theme-button"></i></li>
+                       
+                    </ul>
+                </div>
+
+                <div class="toggle_btn">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+
+            <div class="border"></div>
+        </header>
+
+        <div class="cursor"></div>
+
+        <script>
+
+            (function () {
+            
+                  const link = document.querySelectorAll('nav > .hover-this');
+                  const cursor = document.querySelector('.cursor');
+            
+                  const animateit = function (e) {
+                        const span = this.querySelector('span');
+                        const { offsetX: x, offsetY: y } = e,
+                        { offsetWidth: width, offsetHeight: height } = this,
+            
+                        move = 25,
+                        xMove = x / width * (move * 2) - move,
+                        yMove = y / height * (move * 2) - move;
+            
+                        span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            
+                        if (e.type === 'mouseleave') span.style.transform = '';
+                  };
+            
+                  const editCursor = e => {
+                        const { clientX: x, clientY: y } = e;
+                        cursor.style.left = x + 'px';
+                        cursor.style.top = y + 'px';
+                  };
+            
+                  link.forEach(b => b.addEventListener('mousemove', animateit));
+                  link.forEach(b => b.addEventListener('mouseleave', animateit));
+                  window.addEventListener('mousemove', editCursor);
+            
+            })();
+            
+            </script>
+
+
+
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container home-grid">
+                    <div>
+
+                        <h1 class="home__title">Sanchez <br> Alicia</h1>
+                        <h2 class="home__subtitle">GRAPHISTE FREELANCE</h2>
+                    </div>
+                    
+                    
+
+                    <p>
+                        ACTUELLEMENT À LA RECHERCHE<br> 
+                        D’UNE FORMATION DE DÉVELOPPEUR <br>WEB 
+                        & WEB MOBILE.
+                    </p>
+
+                    <div>
+                     <h3>LYON . FRANCE <br> SANCHEZ.ALICIA.PRO@GMAIL.COM</h3>
+                    </div>
+                </div>
+
+                    <img src="img/fond.gif" alt="x" class="home__img">
+
+            </section>
+               
+    </body>
+</html>
