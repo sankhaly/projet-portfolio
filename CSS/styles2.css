@@ -97,14 +97,13 @@ body{
     flex-direction: column;
     cursor: none;
     background-color: var(--first-color);
-    /* overflow:hidden; */
+  
 }
 
 /* HEADER */
 header{
     width: 100%;
-    /* position: fixed; */
-    top: 0;
+     top: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
@@ -115,7 +114,6 @@ header{
 /* NAV */
 nav{
     display: flex;
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -206,10 +204,6 @@ ul li:hover ~ .cursor{
      padding: 0 0 0 20px;
 }
 
-/* .nav__link:hover{
-    opacity: 30%;
-} */
-
 #theme-button{
     font-weight: 700;
     cursor: pointer;
@@ -219,7 +213,7 @@ ul li:hover ~ .cursor{
 /* HOME */
 
 .work__container{
-    /* height: calc(100% - 3rem); */
+    
         display: flex;
         flex-direction: column;
         grid-column: 1 / 2;

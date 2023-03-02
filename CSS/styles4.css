@@ -97,7 +97,8 @@ body{
     flex-direction: column;
     cursor: none;
     background-color: var(--first-color);
-    /* overflow:hidden; */
+    overflow-x: hidden;
+    
 }
 
 /* HEADER */
@@ -114,7 +115,6 @@ header{
 /* NAV */
 nav{
     display: flex;
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -205,10 +205,6 @@ ul li:hover ~ .cursor{
 .nav__link{
      padding: 0 0 0 20px;
 }
-
-/* .nav__link:hover{
-    opacity: 30%;
-} */
 
 #theme-button{
     font-weight: 700;
@@ -309,7 +305,6 @@ ul li:hover ~ .cursor{
         flex-direction: column;
         grid-column: 1 / 2;
         grid-row: 1;
-        /* padding: 90px; */
         justify-content: space-between;
         box-sizing: border-box;
   
@@ -341,8 +336,6 @@ input, textarea{
 input[type="text"]:focus, textarea:focus{
     border-bottom: 1px solid orange;
     
-
-
 }
 
 textarea::-webkit-scrollbar{
@@ -403,26 +396,10 @@ cursor: pointer;
   
   button:hover {
     transform: translate(0,-6px);
-    /* box-shadow: 10px -10px 25px 0px #ff9b06, -10px 10px 25px 0px rgba(39, 200, 255, .25); */
+   
   }
 
-/* input[type="submit"]{
-    margin-top: 30px;
-    font-size: var(--h4-font-size);
-    width: 70%;
-    max-width: 90px;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    font-weight: 540;
-    cursor: pointer;
-    
-}
 
-input[type="submit"]:hover{
-    position: absolute;
-    background: linear-gradient(45deg , #06A8FF, #06A8FF, #ff6a06 , #ff9b06);
-    border: none;
-} */
 
 .erreur{
     color: orange;
@@ -448,11 +425,10 @@ input[type="submit"]:hover{
     grid-row: 1;
     width: 100%;
     left: 38%;
-    /* margin-left: 14%; */
     margin-top: 50%;
     font-size: var(--h2-font-size);
     text-decoration: underline;
-    /* cursor: pointer; */
+    
     
 }
 
@@ -464,7 +440,6 @@ input[type="submit"]:hover{
     grid-row: 1;
     width: 80%;
     left: 14%;
-    /* padding: 0 0 0 40%; */
     margin-top: 63%;
     font-size: var(--h3-font-size);
     line-height: 1.1;
@@ -479,7 +454,6 @@ input[type="submit"]:hover{
     grid-row: 1;
     width: 80%;
     left: 14%;
-    /* padding: 0 0 0 40%; */
     margin-top: 75%;
     font-size: var(--h3-font-size);
     opacity: 50%;

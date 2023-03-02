@@ -127,7 +127,6 @@ header{
 /* NAV */
 nav{
     display: flex;
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -218,10 +217,6 @@ ul li:hover ~ .cursor{
      padding: 0 0 0 20px;
 }
 
-/* .nav__link:hover{
-    opacity: 30%;
-} */
-
 #theme-button{
     font-weight: 700;
     cursor: pointer;
@@ -242,7 +237,6 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(150px, auto);
-    /* overflow: hidden; */
     background-color: var(--eerie-black-2);
     width: 300px;
     height: 700px;
@@ -259,7 +253,6 @@ main {
     flex-direction: column;
     grid-column: 1 / 2;
     grid-row: 1;
-    /* padding: 30%; */
     justify-content: space-between;
     
   }
@@ -328,14 +321,6 @@ main {
     margin: 7%;
   }
 
-  .contact-info {
-  /* max-width: calc(100% - 10px); */
-  /* width: calc(100% - 46px); */
-}
-
-.contact-link{
-    
-}
 
 .contact-title {
     color: var(--light-gray-70);
@@ -471,7 +456,6 @@ a{
     
     position: absolute;
     background: var(--jet);
-    /* padding: 40px 40px 60px; */
     width: 390px;
     height: 150px;
     border-radius: 14px;
@@ -514,7 +498,6 @@ a{
     
     position: absolute;
     background: var(--jet);
-    /* padding: 40px 40px 60px; */
     width: 390px;
     height: 150px;
     border-radius: 14px;
@@ -558,7 +541,7 @@ a{
     
     position: absolute;
     background: var(--jet);
-    /* padding: 40px 40px 60px; */
+  
     width: 390px;
     height: 150px;
     border-radius: 14px;
@@ -611,8 +594,7 @@ a{
 
 .title-educ{
     font-size: 1.4rem;
-    /* margin-top: -2%;
-    margin-left: 14%; */
+
     padding: 0 14% 3%;
     margin-top: -25px;
 }
@@ -691,28 +673,6 @@ a{
     list-style-type: none;
 }
 
-/* .timeline-item:not(:last-child)::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: -30px;
-    width: 1px;
-    height: calc(100% + 50px);
-    background: var(--jet);
-  }
-
-.timeline-item::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: -33px;
-    height: 6px;
-    width: 6px;
-    background: orange;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--jet);
-  } */
-  
 
 /* SKILLS */
 .skill-title h2{
